@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!-- NAVBAR -->
+<div class="container-fluid p-5  text-white text-left">
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+    <div class="container-fluid">
+      <!-- logo -->
+      <h1>Career_Lift</h1>
+      <!-- TOGGLE BTN -->
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- sidebar -->
+      <div class=" sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <!-- sidebar header -->
+        <div class="offcanvas-header  border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Career_Lift</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body ">
+          <ul class="navbar-nav  justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active btn-default" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button btn-success" data-bs-toggle="dropdown" aria-expanded="false">
+                JOBS
+              </a>
+              <ul class="dropdown-menu btn-success">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+          <!-------------------------------------- LOGIN ------------------------------------------>
+          <button onclick="document.getElementById('id02').style.display='block'" style="width: auto;" class="btn  btn-primary button-space " >Login</button>
+          <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <div class="container bg-light">
+              <h2>Login</h2>
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="remember"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="#" class="btn btn-secondary" onclick="document.getElementById('id02').style.display='none'">Cancel</a>
+              </form>
+            </div>
+          </div>
+          
+
+        <!------------------------------- SIGNUP ----------------------------------->
+          
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto" class="btn btn-primary">Sign Up</button>
+
+            <div id="id01" class="modal">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" , title="Close Modal">&times;</span>
+              <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+                  <hr>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+
+                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+        </li>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+
+<!--------------------- JOB LIST -------------------------->
+
+  
+<div class="container mt-5">
+  <div class="row">
+    
+  
+    
+  
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-google fa-2x" aria-hidden="true">GOOGLE</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id03').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id03" class="modal">
+            <span onclick="document.getElementById('id03').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN2 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa5-microsoft fa-2x" aria-hidden="true">MICROSOFT</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id04').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id04" class="modal">
+            <span onclick="document.getElementById('id04').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN3 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true">LINKDIN</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id05').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id05" class="modal">
+            <span onclick="document.getElementById('id05').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN4 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-google-play fa-2x" aria-hidden="true">GOOGLE PLAY</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id06').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id06" class="modal">
+            <span onclick="document.getElementById('id06').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id06').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN5 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-twitter-square fa-2x" aria-hidden="true">twitter</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id07').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id07" class="modal">
+            <span onclick="document.getElementById('id07').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id07').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN6 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-chrome fa-2x" aria-hidden="true">CHROME</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id08').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id08" class="modal">
+            <span onclick="document.getElementById('id08').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id08').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+  </div>
+
+  <!-- ROW2 -->
+
+  <div class="row">
+    
+  
+    <div class="col-sm-2">
+
+      <div class="container">
+        <i class="fa fa-whatsapp fa-2x" aria-hidden="true">WHATSAPP</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id09').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id09" class="modal">
+            <span onclick="document.getElementById('id09').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id09').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN2 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-skype fa-2x" aria-hidden="true">SKYPE</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id10').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id10" class="modal">
+            <span onclick="document.getElementById('id10').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id10').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN3 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-mahindra fa-2x" aria-hidden="true">MAHINDRA</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id11').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id11" class="modal">
+            <span onclick="document.getElementById('id11').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id11').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN4 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-apple fa-2x" aria-hidden="true">APPLE</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id12').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id12" class="modal">
+            <span onclick="document.getElementById('id12').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id12').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN5 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-samsung fa-2x" aria-hidden="true">SAMSUNG</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id013').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id013" class="modal">
+            <span onclick="document.getElementById('id013').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id013').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN6 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-paypal fa-2x" aria-hidden="true">PAYPAL</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id14').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id14" class="modal">
+            <span onclick="document.getElementById('id14').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id14').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+  </div>
+
+  <!-- ROW 3  -->
+
+  <div class="row">
+    
+  
+    <div class="col-sm-2">
+
+      <div class="container">
+        <i class="fa fa-cars24 fa-2x" aria-hidden="true">CARS24</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id15').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id15" class="modal">
+            <span onclick="document.getElementById('id15').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id15').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN2 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-flipkart fa-2x" aria-hidden="true">FLIPKART</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id16').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id16" class="modal">
+            <span onclick="document.getElementById('id16').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id16').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN3 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-amazon fa-2x" aria-hidden="true">AMAZON</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id17').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id17" class="modal">
+            <span onclick="document.getElementById('id17').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id17').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN4 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-snapchat fa-2x" aria-hidden="true">SNAPCHAT</i>
+       
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id18').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id18" class="modal">
+            <span onclick="document.getElementById('id18').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id18').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN5 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+        <i class="fa fa-facebook-square  fa-2x" aria-hidden="true">FACEBOOK</i>
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id19').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id19" class="modal">
+            <span onclick="document.getElementById('id19').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id19').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+
+    <!-- COLUMN6 -->
+
+    <div class="col-sm-2">
+      <div class="container">
+
+        <i class="fa fa-instagram fa-2x" aria-hidden="true">INSTAGRAM</i>
+        
+        
+        <p>Please fill in this form to create an account.</p>
+        
+        <button onclick="document.getElementById('id20').style.display='block'" style="width:auto" class="btn btn-success">Apply</button>
+
+          <div id="id20" class="modal">
+            <span onclick="document.getElementById('id20').style.display='none'" class="close" , title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container3">
+                  <h1>DATA ANALYTICS</h1>
+                  <p><button class="btn"><i class="fa fa-instagram"></i>Instagram</button>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed voluptatem iste maiores id. Libero iusto</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id20').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="applybtn">APPLY</button>
+                  </div>
+                  
+              </div>
+            </form>
+          </div>
+      </div>      
+      
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
